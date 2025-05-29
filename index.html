@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwi Budi Fitri Adi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="neo-box">
+                    <div class="header-section">
+                        <h1 class="title-section">Laporan</h1>
+                        <div class="print-btn">
+                            <button class="btn btn-accent" onclick="window.print()">
+                                <i class="fas fa-print"></i> Cetak Laporan
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="info-mahasiswa">
+                        <div class="foto-mahasiswa"></div>
+                        <div class="detail-mahasiswa">
+                            <div id="nama-mahasiswa" class="nama-mahasiswa"></div>
+                            <div id="nim-mahasiswa" class="nim-mahasiswa"></div>
+                            <div id="mata-kuliah" class="subject"></div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-custom">
+                            <thead>
+                                <tr>
+                                    <th>Komponen</th>
+                                    <th>Nilai</th>
+                                    <th>Bobot</th>
+                                    <th>Kontribusi</th>
+                                    <th>Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Absen</td>
+                                    <td id="nilai-absen" class="component-value"></td>
+                                    <td>15%</td>
+                                    <td id="kontribusi-absen" class="final-score"></td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div id="progress-absen" class="progress-bar-custom"
+                                                style="background-color: var(--soft-blue);"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Quiz</td>
+                                    <td id="nilai-quiz" class="component-value"></td>
+                                    <td>15%</td>
+                                    <td id="kontribusi-quiz" class="final-score"></td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div id="progress-quiz" class="progress-bar-custom"
+                                                style="background-color: var(--soft-blue);"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tugas</td>
+                                    <td id="nilai-tugas" class="component-value"></td>
+                                    <td>20%</td>
+                                    <td id="kontribusi-tugas" class="final-score"></td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div id="progress-tugas" class="progress-bar-custom"
+                                                style="background-color: var(--soft-blue);"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UTS</td>
+                                    <td id="nilai-uts" class="component-value"></td>
+                                    <td>25%</td>
+                                    <td id="kontribusi-uts" class="final-score"></td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div id="progress-uts" class="progress-bar-custom"
+                                                style="background-color: var(--soft-blue);"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UAS</td>
+                                    <td id="nilai-uas" class="component-value"></td>
+                                    <td>25%</td>
+                                    <td id="kontribusi-uas" class="final-score"></td>
+                                    <td>
+                                        <div class="progress-container">
+                                            <div id="progress-uas" class="progress-bar-custom"
+                                                style="background-color: var(--soft-blue);"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="neo-box">
+                                <div class="text-center">
+                                    <div class="summary-label">Nilai Akhir</div>
+                                    <div id="final-score-value" class="summary-value">0</div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <div class="progress-container" style="width: 80%; height: 25px;">
+                                            <div id="final-score-progress" class="progress-bar-custom"
+                                                style="width: 0%; background-color: var(--accent);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="neo-box text-center">
+                                <div class="summary-label mb-2">Grade</div>
+                                <div id="grade-badge-container" class="grade-badge"></div>
+                                <div id="kategori-text" class="mt-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-note">
+                        * github repository : 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
