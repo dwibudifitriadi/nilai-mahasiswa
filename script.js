@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const nilaiKomponen = nilai[key];
         const kontribusi = (nilaiKomponen * BOBOT[key] / 100);
         document.getElementById(`nilai-${key}`).textContent = nilaiKomponen;
-        document.getElementById(`progress-${key}`).style.width = `${nilai}%`;
+        document.getElementById(`progress-${key}`).style.width = `${nilaiKomponen}%`;
         document.getElementById(`kontribusi-${key}`).textContent = kontribusi.toFixed(2);
     }
     const nilai_akhir = nilaiAkhir(nilai);
