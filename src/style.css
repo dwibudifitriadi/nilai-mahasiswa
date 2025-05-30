@@ -4,8 +4,6 @@
             --accent: #FFEB00;
             --soft-blue: #577BC1;
         }
-
-        /* Tempelkan semua style yang sudah disimpan di sini */
         body {
             background-color: var(--soft-blue);
             color: var(--primary);
